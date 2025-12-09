@@ -1,0 +1,99 @@
+:root {
+    --color-primary: #0B62A4;
+    --color-primary-dark: #084d7d;
+    --color-bg: #f5f7fa;
+    --color-light: #ffffff;
+
+    --radius: 14px;
+    --shadow-soft: 0 4px 15px rgba(0,0,0,0.10);
+    --shadow-hover: 0 6px 18px rgba(0,0,0,0.15);
+
+    --transition: 0.35s ease;
+}
+
+body {
+    background: var(--color-bg);
+    font-family: "Inter", sans-serif;
+}
+
+/* NAVBAR */
+.navbar {
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    background: var(--color-light) !important;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--color-primary-dark);
+}
+
+/* HERO */
+.card-img {
+    filter: brightness(0.75);
+}
+
+.card-img-overlay {
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.28) 100%);
+    border-radius: var(--radius);
+}
+
+/* BOTONES */
+.btn-primary {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-dark);
+    border-color: var(--color-primary-dark);
+}
+
+/* IMÁGENES */
+.img-fluid.rounded {
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition);
+}
+
+.img-fluid.rounded:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+}
+
+/* CARDS */
+.card {
+    border: none;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-soft);
+}
+
+.card:hover {
+    box-shadow: var(--shadow-hover);
+}
+
+/* CLICKABLE para collapse */
+.clickable {
+    cursor: pointer;
+}
+
+/* ICONOS SOCIALES */
+i {
+    transition: var(--transition);
+    color: var(--color-primary);
+}
+
+i:hover {
+    color: var(--color-primary-dark);
+    transform: translateY(-3px);
+}
+
+/* SCROLLFADE */
+.scrollfade {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity .8s ease, transform .8s ease;
+}
+
+.scrollfade.show {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
